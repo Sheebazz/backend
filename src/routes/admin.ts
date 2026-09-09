@@ -81,9 +81,7 @@ router.use((req: Request, res: Response, next: NextFunction) => {
 
   next();
 });
-// Apply role-based API key authentication to all admin routes
-router.use(extractApiKeyRole);
-router.use(requireApiKeyAuth);
+
 
 /** A per-project score update that made it onto the ledger (or was deferred). */
 type ScoreUpdateResult = {
